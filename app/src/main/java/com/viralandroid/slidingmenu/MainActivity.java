@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_item_5:
                         startActivity(new Intent(MainActivity.this,GoogleActivity.class));
                         break;
+                    case R.id.navigation_about_us:
+                        // launch new intent instead of loading fragment
+                        startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
+                        drawerLayout.closeDrawers();
+                        return true;
                 }
                 return false;
             }

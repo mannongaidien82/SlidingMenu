@@ -24,6 +24,7 @@
         <activity android:name=".GoogleActivity">
             <uses-permission android:name="android.permission.INTERNET" />
         </activity>
+        <activity android:name=".AboutUsActivity"></activity>
     </application>
 
 </manifest>
