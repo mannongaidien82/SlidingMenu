@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "com.viralandroid.slidingmenu"
+        applicationId "com.kiai.viralandroid.slidingmeaaanu"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1

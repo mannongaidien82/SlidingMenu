@@ -2,13 +2,15 @@ package com.viralandroid.slidingmenu;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,10 +76,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+       // getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        getMenuInflater().inflate(R.menu.menu_movies, menu);
+        return super.onCreateOptionsMenu(menu);
+
+        //return true;
     }
 
+    public void onComposeAction(MenuItem mi) {
+        Log.i("click", "compose");
+        Toast.makeText(this, "compose", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onProfileAction(MenuItem mi) {
+        Log.i("click", "onprofile");
+        Toast.makeText(this, "profile", Toast.LENGTH_SHORT).show();
+    }
+///*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (drawerToggle.onOptionsItemSelected(item))
@@ -89,10 +105,19 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        } else
+
+//        if (id == R.id.miCompose) {
+//            Toast.makeText(this, "compose", Toast.LENGTH_SHORT);
+//            return true;
+//        } else if (id == R.id.miProfile) {
+//            Toast.makeText(this, "profile", Toast.LENGTH_SHORT);
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
+ //   */
 }
