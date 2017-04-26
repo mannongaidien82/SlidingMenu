@@ -105,9 +105,15 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        } else
+        if (id == R.id.action_settings) {
+            Log.i("click", "action_settings");
+            Toast.makeText(this, "action_settings", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (id == R.id.action_logout) {
+            Log.i("click", "action_logout");
+            Toast.makeText(this, "action_logout", Toast.LENGTH_SHORT).show();
+            return true;
+        }
 
 //        if (id == R.id.miCompose) {
 //            Toast.makeText(this, "compose", Toast.LENGTH_SHORT);
